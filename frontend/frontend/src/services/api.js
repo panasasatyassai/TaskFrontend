@@ -86,9 +86,9 @@ export const createPayout = async (merchantId, amount, key) => {
       "Idempotency-Key": key,
     },
     body: JSON.stringify({
-      merchant_id: merchantId,
-      amount_paise: amount,
-      bank_account_id: "TEST_BANK_123", // ✅ ADD THIS
+      merchant_id: Number(merchantId),
+      amount_paise: Number(amount),
+      bank_account_id: "BANK123", // ✅ ADD THIS
     }),
   });
 
